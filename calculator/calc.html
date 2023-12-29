@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<title>calculator</title>
+</head>
+<style>
+    h1:hover{
+	color:white;
+	}
+	
+  
+	fieldset{
+	background-color:bisque;
+	
+	}
+	.btn{
+	background-color:aqua;
+	height:50px;
+	width:20%;
+	}
+     
+</style>
+<body>
+<fieldset  style="width:20%">
+<h1>CALCULATOR</h1>
+<div>
+<input type="text" id="output"style="width :90%">
+</div><br>
+<div>
+<button class="btn"  onclick="fun('+')">+</button>
+<button class="btn"  onclick="fun('-')"">-</button>
+<button class="btn"  onclick="fun('*')"">*</button>
+<button class="btn"  onclick="fun('/')"">/</button>
+</div><br>
+<div>
+<button class="btn"  onclick="fun('1')">1</button>
+<button class="btn"  onclick="fun('2')">2</button>
+<button class="btn"  onclick="fun('3')">3</button>
+<button class="btn"  onclick="fun('4')">4</button>
+</div><br>
+<div>
+<button class="btn"  onclick="fun('5')">5</button>
+<button class="btn"  onclick="fun('6')">6</button>
+<button class="btn"  onclick="fun('7')">7</button>
+<button class="btn"  onclick="fun('8')">8</button>
+</div><br>
+<div>
+<button class="btn" onclick="fun('9')" >9</button>
+<button class="btn"  onclick="fun('0')">0</button>
+<button class="btn"  onclick="equal()">=</button>
+<button class="btn"  onclick="cl()">CLR</button>
+</div><br>
+</fieldset>
+<script>
+let disp=document.getElementById('output');
+
+function fun(num){
+         disp.value +=num;
+}
+function equal(){
+ let tol = disp.value;
+ disp.value=eval(tol);
+}
+function cl(){
+    document.getElementById('output').value= " ";
+	
+} 
+</script>
+</body>
+</html>
